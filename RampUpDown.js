@@ -9,7 +9,7 @@ export const options ={
     ],
 };
 export default function(){
-    const res= http.get('https://httpbin.test.k6.io/');
+    const res= http.get('https://httpbin.test.k6.io/', {tags:{name: 'PostURL'},});
     check(res, {
         'is status 200': (r) => r.status===200});
     sleep(1);

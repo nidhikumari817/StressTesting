@@ -6,6 +6,6 @@ export const options={
     duration: '30s',
 }
 export default function(){
-    http.get('https://www2.hm.com/en_in/index.html');
+    http.get('https://www2.hm.com/en_in/index.html', {tags: {name: 'GetItemURL'},}); //Adding tags
     sleep(1);
 }
